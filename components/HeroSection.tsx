@@ -6,7 +6,7 @@ const HeroSection = (): JSX.Element => {
             </h1>
 
             <p className="leading-8 text-lg text-[rgba(88,_98,_131,_1)] lg:text-xl lg:w-[70%]">
-                Frameio is dedicated to providing you with high-quality, stylish & simple apparels that seamlessly blends comfort and elegance.
+                Providing you with high quality, stylish & simple apparels that blends comfort & elegance.
             </p>
 
             <button className="bg-brand-blue text-white flex items-center gap-3 rounded-[20px] py-4 px-5 hover:bg-brand-blue/90" type="button">

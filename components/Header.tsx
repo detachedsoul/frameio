@@ -9,12 +9,12 @@ const Header = (): JSX.Element => {
     const [navIsOpen, setNavIsOpen] = useState(false);
 
     return (
-        <header className="flex items-center justify-between gap-4 py-7 px-8 sticky top-0 bg-white lg:px-24">
+        <header className="flex items-center justify-between gap-4 py-7 px-4 sticky top-0 bg-white z-50 lg:px-24">
             <Link href="/">
                 <Image className="w-full h-3/5" src="/logo.svg" alt="Frameio" width={100} height={100} />
             </Link>
 
-            <nav className="absolute hidden bg-slate-50 top-full left-0 w-full p-4 lg:static lg:w-auto lg:p-0 lg:bg-transparent">
+            <nav className="absolute bg-slate-50 top-full left-0 w-full p-4 lg:static lg:w-auto lg:p-0 lg:bg-transparent">
                 <ul className="flex flex-col gap-6 lg:flex-row lg:items-center">
                     <li>
                         <Link className="p-3 border-l-4 block border-l-transparent  transition-all ease-linear hover:font-medium hover:bg-brand-blue/10 hover:border-brand-blue lg:hover:text-brand-blue lg:border-l-0 lg:border-b-2 lg:border-b-transparent lg:hover:bg-transparent" href="/categories/t-shirt">
@@ -41,7 +41,7 @@ const Header = (): JSX.Element => {
                     </span>
                 </Link>
 
-                <button className="bg-brand-blue/10 rounded-md p-2.5 text-brand-blue lg:hidden" type="button">
+                <button className="bg-brand-blue/10 rounded-md p-2.5 text-brand-blue lg:hidden" type="button" aria-label="Toggle nav bar">
                     <LayoutDashboardIcon strokeWidth={1} />
                 </button>
             </div>
