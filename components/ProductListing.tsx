@@ -63,7 +63,7 @@ const ProductListing = (): JSX.Element => {
                     <Image className="w-full aspect-auto h-96 lg:h-[350px] xl:h-96" src={product.productImageURL} alt={product.productName} width={320} height={320} title={product.productName} />
 
                     <div className="space-y-[10px]">
-                        <Link href="/products" className="font-bold text-lg leading-5">
+                        <Link className="font-bold text-lg leading-5 hover:text-brand-blue" href="/products">
                             {product.productName}
                         </Link>
 

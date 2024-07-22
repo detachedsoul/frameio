@@ -12,8 +12,8 @@ const DMSans = DM_Sans(
 );
 
 export const metadata: Metadata = {
-    title: "Frameio Clothing | Simple luxury products to express your personal styles",
-    description: "Frameio Clothing | Simple luxury products to express your personal styles",
+    title: "Frameio Stores | Simple luxury products to express your personal styles",
+    description: "Frameio Stores | Simple luxury products to express your personal styles",
 };
 
 export default function RootLayout({
