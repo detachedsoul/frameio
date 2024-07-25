@@ -38,7 +38,7 @@ const Header = (): JSX.Element => {
                 <ul className="flex flex-col gap-6 lg:flex-row lg:items-center">
                     {categories.map((category): JSX.Element => (
                         <li key={category.id}>
-                            <Link className={`p-3 border-l-4 block border-l-transparent border-brand-blue transition-all ease-linear ${pathname === category.route ? "font-medium bg-brand-blue/10 border-l-brand-blue lg:text-brand-blue" : "hover:font-medium hover:bg-brand-blue/10 hover:border-brand-blue lg:hover:text-brand-blue lg:border-b-transparent"} lg:border-l-0 lg:border-b-2 lg:hover:bg-transparent lg:bg-transparent`} href={category.route}>
+                            <Link className={`p-3 border-l-4 block transition-all ease-linear ${pathname === category.route ? "font-medium bg-brand-light-blue border-brand-blue lg:text-brand-blue" : "border-l-transparent hover:font-medium hover:bg-brand-light-blue hover:border-brand-blue lg:hover:text-brand-blue lg:border-b-transparent"} lg:border-l-0 lg:border-b-2 lg:hover:bg-transparent lg:bg-transparent`} href={category.route}>
                                 {category.categoryName}
                             </Link>
                         </li>
