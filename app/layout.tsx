@@ -23,7 +23,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${DMSans.variable} font-dm-sans antialiased text-brand-black text-normal selection:bg-brand-blue selection:text-white`}>
+            <head>
+                <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+            </head>
+
+            <body className={`${DMSans.variable} font-dm-sans antialiased text-brand-black text-normal leading-7 selection:bg-brand-blue selection:text-white`}>
                 <Header />
 
                 <main className="px-4 pb-12 lg:pb-28 lg:px-24">

@@ -2,11 +2,9 @@
 
 import ProductListing from "@/components/ProductListing";
 import ProductListingLoading from "@/components/ProductsListingLoading";
-import Link from "next/link";
-import { SearchIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const Categories = (): JSX.Element => {
+const Categories = ({ title = "All Collections" }: {title?: string}): JSX.Element => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -20,7 +18,7 @@ const Categories = (): JSX.Element => {
             <section className="mt-12">
                 <div className="flex items-center flex-wrap justify-between gap-4 mb-10">
                     <h1 className="font-medium text-xl leading-6">
-                        All Collections
+                        {title}
                     </h1>
 
                     <form className="flex items-center bg-[rgba(240,_242,_245,_1)] pr-2 py-2 pl-4 rounded-[20px]" method="get">

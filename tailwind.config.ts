@@ -10,6 +10,7 @@ const config: Config = {
         extend: {
             colors: {
                 "brand-blue": "rgba(56, 97, 251, 1)",
+                "brand-light-blue": "rgba(234, 241, 255, 1)",
                 "brand-black": "rgba(13, 20, 33, 1)",
                 "brand-red": "rgba(255, 0, 0, 1)",
                 "brand-gray": "rgba(88, 98, 131, 1)",
