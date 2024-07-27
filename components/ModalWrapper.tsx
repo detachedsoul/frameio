@@ -5,13 +5,14 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { XIcon } from "lucide-react";
 
 interface ModalProps {
-    header: string;
     isActive: boolean;
-    toggleIsActive: Dispatch<SetStateAction<number>>;
+    toggleIsActive: Dispatch<SetStateAction<boolean>>;
 }
 
-const ModalWrapper: React.FC<MOdalProps> = ({ header, isActive, toggleIsActive }: ModalProps) => {
+const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalProps) => {
     const [popupHeader, setPopupHeader] = useState("Shopping Cart");
+
+    console.log(setPopupHeader)
 
     return (
         <div className={`fixed bg-[rgba(29,_35,_41,_0.5)] h-screen inset-0 w-full z-50 animate-all duration-500 ease-in-out ${isActive ? "scale-100" : "scale-0"}`}>
