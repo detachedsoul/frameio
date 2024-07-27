@@ -94,7 +94,7 @@ const ProductDetails = (): JSX.Element => {
                                 </button>
                             </div>
 
-                            <button className="bg-brand-blue text-white text-sm font-bold rounded-[20px] py-3 px-6 flex items-center gap-3 hover:bg-brand-blue/90" type="submit">
+                            <button className="bg-brand-blue text-white text-sm font-bold rounded-[20px] py-3 px-6 flex items-center gap-3 hover:bg-brand-blue/90" type="button">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
                                     <path d="M7.34162 2.16663L4.32495 5.19163" stroke="white" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                                     <path d="M12.6584 2.16663L15.6751 5.19163" stroke="white" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
