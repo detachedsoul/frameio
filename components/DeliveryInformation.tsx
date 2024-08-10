@@ -1,3 +1,4 @@
+import CountryCodePicker from "@/components/CountryCodePicker";
 import { Dispatch, SetStateAction } from "react";
 
 interface ICartContainer {
@@ -32,12 +33,17 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
                     <input className="input-form" type="email" name="email" id="email" placeholder="e.g doe@frameio.com.ng" />
                 </label>
 
-                <label className="grid gap-2" htmlFor="phoneNumber">
+                <label className="grid gap-2 w-full" htmlFor="phoneNumber">
                     <span className="text-sm font-medium leading-7">
                         Phone Number
                     </span>
 
-                    <input className="input-form" type="text" name="phoneNumber" id="phoneNumber" inputMode="numeric" />
+                    <div className="flex items-center gap-2 py-0 input-form">
+                        <CountryCodePicker />
+
+                        <input className="input-form px-0 shadow-none border-0 border-transparent rounded-none transition-none" type="text" name="phoneNumber" id="phoneNumber" inputMode="numeric" />
+                    </div>
+
                 </label>
 
                 <label className="grid gap-2 md:col-span-2" htmlFor="deliveryAddress">
@@ -45,7 +51,7 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
                         Delivery Address
                     </span>
 
-                    <textarea className="input-form" placeholder="Delivery address, directions and state." id="deliveryAddress" rows={5}></textarea>
+                    <textarea className="input-form" placeholder="Delivery address, directions and state." id="deliveryAddress" rows={10}></textarea>
                 </label>
 
                 <label className="flex items-center gap-2 text-brand-gray md:col-span-2" htmlFor="saveInfo">
