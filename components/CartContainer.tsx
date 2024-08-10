@@ -1,6 +1,11 @@
 import CartItem from "@/components/CartItem";
+import { Dispatch, SetStateAction } from "react";
 
-const CartContainer = (): JSX.Element => {
+interface ICartContainer {
+    toggleModalHeader: Dispatch<SetStateAction<string>>;
+};
+
+const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartContainer) => {
     return (
         <>
             <div className="space-y-5">
@@ -30,7 +35,9 @@ const CartContainer = (): JSX.Element => {
                     </span>
                 </div>
 
-                <button className="bg-brand-blue text-white text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-blue/90" type="button">
+                <button className="bg-brand-blue text-white text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-blue/90" type="button" onClick={() => {
+                    toggleModalHeader("Delivery Information");
+                }}>
                     Checkout
                 </button>
 

@@ -6,4 +6,12 @@
     .input {
         @apply focus:outline-none
     }
+
+    .input-form {
+        @apply input rounded-xl bg-white border border-[rgba(240,_242,_245,_1)] shadow-[0px_1px_2px_0px_rgba(88,_98,_131,_0.2)] p-4 placeholder:text-brand-gray text-sm leading-4 focus:shadow-none transition-all duration-300 ease-in-out
+    }
+
+    .input-checkbox {
+        @apply form-checkbox size-5 rounded-md border border-brand-gray/30 cursor-pointer focus:ring-brand-gray/20
+    }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import CartContainer from "@/components/CartContainer";
+import DeliveryInformation from "@/components/DeliveryInformation";
 import { Dispatch, SetStateAction, useState } from "react";
 import { XIcon } from "lucide-react";
 
@@ -12,16 +13,20 @@ interface ModalProps {
 const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalProps) => {
     const [popupHeader, setPopupHeader] = useState("Shopping Cart");
 
-    console.log(setPopupHeader)
-
     return (
         <div className={`fixed bg-[rgba(29,_35,_41,_0.5)] h-screen inset-0 w-full z-50 animate-all duration-500 ease-in-out ${isActive ? "scale-100" : "scale-0"}`}>
             <div className="lg:w-1/2 lg:ml-auto bg-white h-full">
                 <div className="h-[calc(100vh-5rem)] lg:h-[calc(100vh-2.5rem)] px-5 lg:px-10 overflow-y-auto">
-                    <div className="flex items-center justify-between flex-wrap gap-4 py-5 mb-5 lg:mb-10 sticky top-0 bg-white">
+                    <div className="flex items-center justify-between flex-wrap gap-4 py-5 mb-5 lg:mb-10 sticky z-[1024] top-0 bg-white">
                         {popupHeader === "Shopping Cart" && (
                             <h3 className="font-bold text-2xl flex items-center gap-3">
                                 Shopping Cart <span className="bg-brand-black rounded-full py-0.5 px-2.5 text-lg text-white flex place-content-center">3</span>
+                            </h3>
+                        )}
+
+                        {popupHeader !== "Shopping Cart" && (
+                            <h3 className="font-bold text-2xl flex items-center gap-3">
+                                {popupHeader}
                             </h3>
                         )}
 
@@ -30,7 +35,13 @@ const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalP
                         </button>
                     </div>
 
-                    <CartContainer />
+                    {popupHeader === "Shopping Cart" && (
+                        <CartContainer toggleModalHeader={setPopupHeader} />
+                    )}
+
+                    {popupHeader !== "Shopping Cart" && (
+                        <DeliveryInformation toggleModalHeader={setPopupHeader} />
+                    )}
                 </div>
             </div>
         </div>
