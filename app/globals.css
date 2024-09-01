@@ -14,4 +14,17 @@
     .input-checkbox {
         @apply form-checkbox size-5 rounded-md border border-brand-gray/30 cursor-pointer focus:ring-brand-gray/20
     }
+
+    .custom-scrollbar {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        @apply hidden;
+    }
+
+    .overflow-y-auto {
+        -webkit-overflow-scrolling: touch;
+    }
 }
