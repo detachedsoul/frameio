@@ -24,7 +24,7 @@ const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartCon
 				</div>
 
 				<div className="flex items-center justify-between flex-wrap gap-3">
-					<span className="text-brand-gray">Subtotal</span>
+					<span className="text-brand-gray">Sub Total</span>
 
 					<span className="font-bold text-xl leading-6 -tracking-[0.5px]">
 						₦70,000
@@ -32,7 +32,7 @@ const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartCon
 				</div>
 
 				<button
-					className="bg-brand-blue text-white text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-blue/90"
+					className="bg-brand-purple text-white text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-purple/90 hover:ring-1 hover:ring-brand-purple/20 hover:ring-offset-2"
 					type="button"
 					onClick={() => {
 						toggleModalHeader("Delivery Information");
@@ -42,7 +42,7 @@ const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartCon
 				</button>
 
 				<button
-					className="bg-white border border-[rgba(240,_242,_245,_1)] text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-blue/90 hover:text-white"
+					className="bg-white border border-[rgba(240,_242,_245,_1)] text-sm font-medium rounded-[20px] py-4 px-14 block w-full hover:bg-brand-purple/90 hover:text-white"
 					type="button"
 				>
 					Clear cart

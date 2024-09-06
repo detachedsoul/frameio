@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ShoppingCartIcon from "@/components/ShoppingCartIcon";
 import ModalWrapper from "@/components/ModalWrapper";
+import MobileHeaderLogo from "@/components/MobileHeaderLogo";
 import { useState, useEffect, useId } from "react";
 import { MenuIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -24,6 +26,16 @@ const Header = (): JSX.Element => {
             categoryName: "Tote Bags",
             route: "/categories/tote-bags"
         },
+        {
+            id: useId(),
+            categoryName: "Accessories",
+            route: "/categories/accessories"
+        },
+        {
+            id: useId(),
+            categoryName: "Featured",
+            route: "/categories/featured"
+        },
     ];
 
     useEffect(() => {
@@ -44,16 +56,28 @@ const Header = (): JSX.Element => {
     }, [modalIsActive]);
 
     return (
-        <header className="flex items-center justify-between gap-4 p-4 sticky top-0 bg-white z-50 lg:px-24">
-            <Link href="/">
+        <header className="flex items-center justify-between gap-4 p-4 pr-8 sticky top-0 bg-white z-50 lg:py-4 lg:px-24 lg:pr-28">
+            <button className="rounded-md text-brand-black lg:hidden" type="button" aria-label="Toggle nav bar" onClick={() => setNavIsOpen(!navIsOpen)}>
+                {navIsOpen ? (
+                    <XIcon strokeWidth={2} size={30} />
+                ) : (
+                    <MenuIcon strokeWidth={2} size={30} />
+                )}
+            </button>
+
+            <Link className="hidden lg:block" href="/">
                 <Image className="w-full h-3/5" src="/logo.svg" alt="Frameio Stores" width={100} height={100} priority />
+            </Link>
+
+            <Link className="lg:hidden" href="/">
+                <MobileHeaderLogo />
             </Link>
 
             <nav className={`absolute bg-white top-full left-0 w-full p-4 shadow transition-transform ease-in-out duration-500 ${navIsOpen ? "translate-y-0" : "-translate-y-[200%]"} lg:shadow-none lg:translate-y-0 lg:static lg:w-auto lg:p-0 lg:bg-transparent`}>
                 <ul className="flex flex-col gap-6 lg:flex-row lg:items-center">
                     {categories.map((category): JSX.Element => (
                         <li key={category.id}>
-                            <Link className={`p-3 border-l-4 block transition-all ease-linear ${pathname === category.route ? "font-medium bg-brand-light-blue border-brand-blue lg:text-brand-blue" : "border-l-transparent hover:font-medium hover:bg-brand-light-blue hover:border-brand-blue lg:hover:text-brand-blue lg:border-b-transparent"} lg:border-l-0 lg:border-b-2 lg:hover:bg-transparent lg:bg-transparent`} href={category.route}>
+                            <Link className={`p-3 border-l-4 block transition-all ease-linear ${pathname === category.route ? "font-medium bg-brand-light-purple/50 border-brand-purple lg:text-brand-purple" : "border-l-transparent hover:font-medium hover:bg-brand-light-purple/50 hover:border-brand-purple lg:hover:text-brand-purple lg:border-b-transparent"} lg:border-l-0 lg:border-b-2 lg:hover:bg-transparent lg:bg-transparent`} href={category.route}>
                                 {category.categoryName}
                             </Link>
                         </li>
@@ -64,21 +88,11 @@ const Header = (): JSX.Element => {
 
             <div className="flex items-center gap-12">
                 <button className="relative" type="button" onClick={() => setModalIsActive(true)}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M7.19998 6.0002V7.20019H5.60038C5.07508 7.20031 4.5689 7.39729 4.1817 7.75228C3.7945 8.10727 3.55441 8.59448 3.50878 9.11779L2.51758 20.5178C2.4923 20.8077 2.52756 21.0997 2.62111 21.3753C2.71466 21.6508 2.86446 21.9039 3.06101 22.1186C3.25756 22.3332 3.49657 22.5046 3.76288 22.6219C4.02918 22.7393 4.31697 22.8 4.60798 22.8002H19.392C19.6831 22.8001 19.971 22.7395 20.2375 22.6223C20.5039 22.505 20.7431 22.3336 20.9397 22.119C21.1364 21.9044 21.2863 21.6512 21.38 21.3756C21.4736 21.0999 21.5089 20.8078 21.4836 20.5178L20.4924 9.11779C20.4467 8.59427 20.2065 8.10689 19.819 7.75188C19.4316 7.39686 18.9251 7.20001 18.3996 7.20019H16.8V6.0002C16.8 4.72716 16.2943 3.50626 15.3941 2.60608C14.4939 1.70591 13.273 1.2002 12 1.2002C10.7269 1.2002 9.50604 1.70591 8.60587 2.60608C7.70569 3.50626 7.19998 4.72716 7.19998 6.0002ZM12 3.0002C11.2043 3.0002 10.4413 3.31627 9.87866 3.87887C9.31605 4.44148 8.99998 5.20455 8.99998 6.0002V7.20019H15V6.0002C15 5.20455 14.6839 4.44148 14.1213 3.87887C13.5587 3.31627 12.7956 3.0002 12 3.0002ZM8.99998 12.0002C8.99998 12.7958 9.31605 13.5589 9.87866 14.1215C10.4413 14.6841 11.2043 15.0002 12 15.0002C12.7956 15.0002 13.5587 14.6841 14.1213 14.1215C14.6839 13.5589 15 12.7958 15 12.0002V10.5002C15 10.2615 15.0948 10.0326 15.2636 9.8638C15.4324 9.69502 15.6613 9.60019 15.9 9.60019C16.1387 9.60019 16.3676 9.69502 16.5364 9.8638C16.7052 10.0326 16.8 10.2615 16.8 10.5002V12.0002C16.8 13.2732 16.2943 14.4941 15.3941 15.3943C14.4939 16.2945 13.273 16.8002 12 16.8002C10.7269 16.8002 9.50604 16.2945 8.60587 15.3943C7.70569 14.4941 7.19998 13.2732 7.19998 12.0002V10.5002C7.19998 10.2615 7.2948 10.0326 7.46358 9.8638C7.63237 9.69502 7.86129 9.60019 8.09998 9.60019C8.33868 9.60019 8.56759 9.69502 8.73638 9.8638C8.90516 10.0326 8.99998 10.2615 8.99998 10.5002V12.0002Z" fill="#3861FB" />
-                    </svg>
+                    <ShoppingCartIcon />
 
-                    <span className="absolute bg-brand-red text-white -top-1/2 -right-4 font-medium rounded-full text-xs px-1.5 py-0.5 flex place-items-center place-content-center">
+                    <span className="absolute bg-brand-red text-white -top-1/2 lg:-top-[80%] -right-5 font-medium rounded-full text-xs px-[7px] py-[1.9px] grid place-content-center">
                         3
                     </span>
-                </button>
-
-                <button className="bg-brand-light-blue rounded-md p-2.5 text-brand-blue lg:hidden" type="button" aria-label="Toggle nav bar" onClick={() => setNavIsOpen(!navIsOpen)}>
-                    {navIsOpen ? (
-                        <XIcon />
-                    ) : (
-                        <MenuIcon />
-                    )}
                 </button>
             </div>
 

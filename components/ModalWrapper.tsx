@@ -69,7 +69,7 @@ const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalP
 						)}
 
 						<button
-							className="border border-[rgba(240,_242,_245,_1)] rounded-xl p-2 hover:bg-brand-gray group animate-colors duration-300"
+							className="border border-[rgba(240,_242,_245,_1)] rounded-xl p-2 hover:bg-brand-purple group animate-colors duration-300"
 							type="button"
 							aria-label="Close cart modal"
 							onClick={() => toggleIsActive(false)}

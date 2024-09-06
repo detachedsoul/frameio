@@ -1,4 +1,5 @@
 import ProductDetails from "@/components/product-details/ProductDetails";
+import { IProductDetails } from "@/constants/interface";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,9 +7,9 @@ export const metadata: Metadata = {
     description: "Frameio Stores | Earthy Brown Frameio Tee",
 };
 
-const Index = (): JSX.Element => {
+const Index: React.FC<IProductDetails> = ({ params }: IProductDetails) => {
     return (
-        <ProductDetails />
+        <ProductDetails params={params} />
     );
 };
 

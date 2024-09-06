@@ -57,13 +57,13 @@ const ProductListing = (): JSX.Element => {
     ];
 
     return (
-        <div className="grid gap-8 lg:grid-cols-3 lg:gap-16">
+        <div className="grid gap-8 grid-cols-2 lg:grid-cols-3 lg:gap-16">
             {products.map((product: productsType): JSX.Element => (
                 <div className="space-y-6" key={product.id}>
-                    <Image className="w-full aspect-auto object-cover object-center h-96 lg:h-[350px] xl:h-96" src={product.productImageURL} alt={product.productName} width={320} height={320} title={product.productName} quality={100} />
+                    <Image className="w-full aspect-auto object-cover object-center h-40 lg:h-[350px] xl:h-96" src={product.productImageURL} alt={product.productName} width={320} height={320} title={product.productName} quality={100} />
 
                     <div className="space-y-[10px]">
-                        <Link className="font-bold text-lg leading-5 hover:text-brand-blue" href={product.productDescriptionRoute}>
+                        <Link className="font-bold text-lg leading-5 hover:text-brand-purple" href={product.productDescriptionRoute}>
                             {product.productName}
                         </Link>
 
