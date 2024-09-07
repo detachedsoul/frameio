@@ -52,7 +52,7 @@ const CountryCodePicker = (): JSX.Element => {
                 <ChevronDownIcon className="text-brand-purple" size={28} strokeWidth={1} />
             )}
 
-            <div className={`absolute left-0 grid z-50 rounded-md custom-scrollbar transition-all ease-in-out duration-300 top-[calc(100%+0.7rem)] border border-[rgba(240,_242,_245,_1)] shadow-[0px_1px_2px_0px_rgba(88,_98,_131,_0.2)] overflow-y-auto max-h-32 ${isOpen ? "block" : "hidden"}`}>
+            <div className={`absolute left-0 grid z-50 rounded-md hide-scrollbar transition-all ease-in-out duration-300 top-[calc(100%+0.7rem)] border border-[rgba(240,_242,_245,_1)] shadow-[0px_1px_2px_0px_rgba(88,_98,_131,_0.2)] overflow-y-auto max-h-32 ${isOpen ? "block" : "hidden"}`}>
                 {countries.map((country) => (
                     <span className={`flex items-center gap-3 relative border-b-[0.5px] border-brand-light-purple last:border-transparent w-full pl-4 pr-10 py-1 ${country.country === selectedCountry.country ? "bg-brand-light-purple" : "bg-white"}`} onClick={() => {
                         setSelectedCountry(country);

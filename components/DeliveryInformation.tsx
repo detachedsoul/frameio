@@ -68,11 +68,11 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
 						Phone Number
 					</span>
 
-					<div className="flex items-center gap-2 py-0 pl-0 input-form">
+					<div className="flex items-center gap-2 py-0.5 pl-0 input-form">
 						<CountryCodePicker />
 
 						<input
-							className="input-form px-0 shadow-none border-0 border-transparent rounded-none transition-none"
+							className="input-form px-0 py-3.5 shadow-none border-0 border-transparent rounded-none transition-none focus:ring-transparent"
 							type="text"
 							name="phoneNumber"
 							id="phoneNumber"

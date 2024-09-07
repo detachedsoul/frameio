@@ -3,28 +3,54 @@
 @tailwind utilities;
 
 @layer components {
+    ::-webkit-scrollbar {
+        @apply w-4
+    }
+
+    ::-webkit-scrollbar-button {
+        @apply text-brand-purple
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-brand-light-purple rounded-full
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-brand-purple rounded-full
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-brand-purple/50
+    }
+
     .input {
         @apply focus:outline-none
     }
 
     .input-form {
-        @apply input rounded-xl bg-white border border-[rgba(240,_242,_245,_1)] shadow-[0px_1px_2px_0px_rgba(88,_98,_131,_0.2)] p-4 placeholder:text-brand-gray text-brand-gray text-sm leading-4 focus:shadow-none transition-all duration-300 ease-in-out focus-within:shadow-none w-full
+        @apply input rounded-xl bg-white border border-[rgba(240,_242,_245,_1)] shadow-[0px_1px_2px_0px_rgba(88,_98,_131,_0.2)] p-4 placeholder:text-brand-gray text-brand-gray text-sm leading-4 focus:shadow-none transition-all duration-300 ease-in-out focus-within:shadow-none w-full focus:ring-1 focus:ring-[rgba(240,_242,_245,_1)] focus:ring-offset-2 focus-within:ring-1 focus-within:ring-[rgba(240,_242,_245,_1)] focus-within:ring-offset-2
     }
 
     .input-checkbox {
         @apply form-checkbox size-5 rounded-md border text-brand-purple border-brand-purple/20 cursor-pointer hover:ring-1 hover:ring-brand-purple/20 hover:ring-offset-2 focus:ring-1 focus:ring-brand-purple/20 focus:ring-offset-2
     }
 
-    .custom-scrollbar {
+    .hide-scrollbar {
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
 
-    .custom-scrollbar::-webkit-scrollbar {
+    .hide-scrollbar::-webkit-scrollbar {
         @apply hidden;
     }
 
     .overflow-y-auto {
         -webkit-overflow-scrolling: touch;
+    }
+
+    @-moz-document url-prefix() {
+        .custom-scrollbar {
+            scrollbar-color: #9747ff #f5edff;
+        }
     }
 }

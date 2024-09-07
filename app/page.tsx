@@ -19,7 +19,7 @@ const Index = (): JSX.Element => {
         <>
             <HeroSection />
 
-            <section className="mt-12 scroll-mt-20" id="content-container">
+            <section className="mt-12 scroll-mt-24" id="content-container">
                 <div className="flex items-center flex-wrap justify-between gap-4 mb-10">
                     <h2 className="font-medium text-xl leading-6">
                         Our <span className="hidden lg:inline">Newest</span> Collections
