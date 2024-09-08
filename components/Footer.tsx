@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = (): JSX.Element => {
     return (
-		<footer className="flex items-center justify-between border-t-[0.5px] bg-[rgba(240,_242,_245,_1)] py-5 px-4 lg:px-24">
+		<footer className="flex items-center justify-between border-t-[0.5px] bg-[rgba(240,_242,_245,_1)] py-5 px-4 sm:px-8 md:px-4 lg:px-24">
 			<p className="leading-5">
 				&copy; {new Date().getFullYear()} Frameio Clothings. All Rights
 				Reserved

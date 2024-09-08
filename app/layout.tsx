@@ -39,7 +39,7 @@ export default function RootLayout({
 			>
 				<Header />
 
-				<main className="px-4 pb-12 lg:pb-28 lg:px-24">{children}</main>
+				<main className="px-4 pb-12 sm:px-8 md:px-4 lg:pb-28 lg:px-24">{children}</main>
 
 				<Footer />
 			</body>

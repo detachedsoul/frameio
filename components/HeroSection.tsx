@@ -1,6 +1,6 @@
 const HeroSection = (): JSX.Element => {
     return (
-		<div className="space-y-5 py-12 lg:w-[70%]">
+		<div className="space-y-5 py-12 md:w-[70%]">
 			<h1 className="font-bold text-4xl leading-[46px] -tracking-[2px] lg:text-5xl lg:leading-[60px]">
 				Explore the finest collection of simple & luxury fashion wears.
 			</h1>

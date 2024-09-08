@@ -45,7 +45,7 @@ const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalP
 			}`}
 		>
 			<div
-				className="lg:w-1/2 lg:ml-auto bg-white"
+				className="md:w-4/5 md:ml-auto bg-white lg:w-1/2"
 				style={{ height: "calc(var(--vh, 1vh) * 100)" }}
 			>
 				<div

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const CartItem = (): JSX.Element => {
     return (
-        <div className="flex items-center gap-7 pb-5 flex-wrap border-b border-[rgba(240,_242,_245,_1)] last:border-0 last:pb-0">
+        <div className="flex items-center gap-7 pb-5 flex-wrap border-b border-[rgba(240,_242,_245,_1)] md:last:pb-5 md:last:border-b last:border-0 last:pb-0 lg:last:border-0">
             <Image className="w-[150px] h-[150px] rounded-[20px] aspect-auto object-cover object-center" src="/earthly-brown-tee.png" alt="Earthy Brown Frameio Tee" width={150} height={150} priority />
 
             <div className="grow space-y-5">
