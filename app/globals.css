@@ -7,10 +7,6 @@
         @apply w-4
     }
 
-    ::-webkit-scrollbar-button {
-        @apply text-brand-purple
-    }
-
     ::-webkit-scrollbar-track {
         @apply bg-brand-light-purple rounded-full
     }
@@ -32,7 +28,7 @@
     }
 
     .input-checkbox {
-        @apply form-checkbox size-5 rounded-md border text-brand-purple border-brand-purple/20 cursor-pointer hover:ring-1 hover:ring-brand-purple/20 hover:ring-offset-2 focus:ring-1 focus:ring-brand-purple/20 focus:ring-offset-2
+        @apply form-checkbox size-5 rounded-md border text-brand-purple border-brand-gray/20 cursor-pointer hover:ring-1 hover:border-brand-purple/20 hover:ring-brand-purple/20 hover:ring-offset-2 focus:ring-1 focus:ring-brand-purple/20 focus:ring-offset-2
     }
 
     .hide-scrollbar {

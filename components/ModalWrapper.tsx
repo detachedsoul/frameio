@@ -40,8 +40,8 @@ const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalP
 
     return (
 		<div
-			className={`fixed bg-[rgba(29,_35,_41,_0.5)] h-screen inset-0 w-full z-50 animate-all duration-500 ease-in-out ${
-				isActive ? "scale-100" : "scale-0"
+			className={`fixed bg-[rgba(29,_35,_41,_0.5)] h-screen inset-0 w-full z-50 transition-transform duration-700 ease-in-out ${
+				isActive ? "translate-x-0" : "translate-x-full"
 			}`}
 		>
 			<div
@@ -56,7 +56,7 @@ const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalP
 						{popupHeader === "Shopping Cart" && (
 							<h3 className="font-bold text-2xl flex items-center gap-3">
 								Shopping Cart{" "}
-								<span className="bg-brand-black rounded-full py-0.5 px-2.5 text-lg text-white flex place-content-center">
+								<span className="bg-brand-black rounded-full py-[1px] px-2.5 text-lg text-white grid place-content-center">
 									3
 								</span>
 							</h3>
