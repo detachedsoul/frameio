@@ -8,7 +8,7 @@ interface ICartContainer {
 const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartContainer) => {
     return (
 		<>
-			<form className="grid gap-5 md:grid-cols-2 px-5 lg:px-10">
+			<form className="grid gap-5 sm:grid-cols-2 px-5 lg:px-10">
 				<label
 					className="grid gap-2"
 					htmlFor="firstName"
@@ -82,7 +82,7 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
 				</label>
 
 				<label
-					className="grid gap-2 md:col-span-2"
+					className="grid gap-2 sm:col-span-2"
 					htmlFor="deliveryAddress"
 				>
 					<span className="text-sm font-medium leading-7">
@@ -98,7 +98,7 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
 				</label>
 
 				<label
-					className="flex items-center gap-2 text-brand-gray md:col-span-2"
+					className="flex items-center gap-2 text-brand-gray sm:col-span-2"
 					htmlFor="saveInfo"
 				>
 					<input
@@ -110,7 +110,7 @@ const DeliveryInformation: React.FC<ICartContainer> = ({ toggleModalHeader }: IC
 				</label>
 
 				<label
-					className="flex items-center gap-2 text-brand-gray md:col-span-2"
+					className="flex items-center gap-2 text-brand-gray sm:col-span-2"
 					htmlFor="contactUser"
 				>
 					<input

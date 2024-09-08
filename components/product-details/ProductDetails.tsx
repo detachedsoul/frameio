@@ -45,7 +45,7 @@ const ProductDetails: React.FC<IProductDetails> = ({
 				<div className="grid gap-7 lg:gap-12 md:grid-cols-12 lg:items-center">
 					<div className="relative h-96 shadow-[2px_2px_20px_0px_rgba(0,_0,_0,_0.1)] rounded-[32px] lg:col-span-5 lg:h-[500px] xl:h-[550px] md:col-span-6">
 						<Image
-							className="w-full h-full rounded-[32px] aspect-auto object-cover object-center"
+							className="w-full h-full rounded-[32px] aspect-auto object-cover object-center sm:object-top md:object-center"
 							src="/earthly-brown-tee.png"
 							alt="Earthy Brown Frameio Tee"
 							fill

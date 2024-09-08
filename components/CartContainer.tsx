@@ -8,7 +8,7 @@ interface ICartContainer {
 const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartContainer) => {
     return (
 		<>
-			<div className="space-y-5 px-5 md:grid md:grid-cols-2 md:gap-10 md:space-y-0 lg:px-10 lg:block lg:space-y-5">
+			<div className="space-y-5 px-5 sm:grid sm:grid-cols-2 sm:gap-10 sm:space-y-0 lg:px-10 lg:block lg:space-y-5">
 				<CartItem />
 				<CartItem />
 				<CartItem />

@@ -58,7 +58,7 @@ const ProductListing = (): JSX.Element => {
 	];
 
 	return (
-		<div className="grid gap-8 grid-cols-2 md:grid-cols-3 lg:gap-16">
+		<div className="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:gap-16">
 			{products.map(
 				(product: productsType): JSX.Element => (
 					<motion.div
@@ -68,7 +68,7 @@ const ProductListing = (): JSX.Element => {
 						whileInView={{ opacity: 1 }}
 					>
 						<Image
-							className="w-full aspect-auto object-cover object-center h-40 md:h-60 lg:h-[350px] xl:h-96"
+							className="w-full aspect-auto object-cover object-center h-40 sm:h-[15.5rem] md:h-60 lg:h-[350px] xl:h-96"
 							src={product.productImageURL}
 							alt={product.productName}
 							width={320}
