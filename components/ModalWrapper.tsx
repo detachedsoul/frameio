@@ -10,7 +10,7 @@ interface ModalProps {
     toggleIsActive: Dispatch<SetStateAction<boolean>>;
 }
 
-const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }: ModalProps) => {
+const ModalWrapper: React.FC<ModalProps> = ({ isActive, toggleIsActive }) => {
     const [popupHeader, setPopupHeader] = useState("Shopping Cart");
 
     const container = useRef<HTMLDivElement | null>(null);

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import DeleteIcon from "@/components/DeleteIcon";
 import QuantityControl from "@/components/QuantityControl";
-import { useState } from "react";
 
 const CartItem = (): JSX.Element => {
     return (

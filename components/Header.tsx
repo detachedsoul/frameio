@@ -56,7 +56,7 @@ const Header = (): JSX.Element => {
     }, [modalIsActive]);
 
     return (
-		<header className="flex items-center justify-between gap-4 p-4 pr-8 sticky top-0 bg-white z-50 sm:px-12 md:py-4 lg:px-24 lg:pr-28">
+		<header className="flex items-center justify-between gap-4 pt-6 p-4 pr-8 sticky top-0 bg-white z-50 sm:px-12 md:py-4 lg:px-24 lg:pr-28 xl:px-[10%] 2xl:px-[20%]">
 			<button
 				className="rounded-md text-brand-black md:hidden"
 				type="button"

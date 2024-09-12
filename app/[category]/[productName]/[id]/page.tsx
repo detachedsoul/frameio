@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: "Frameio Stores | Earthy Brown Frameio Tee",
 };
 
-const Index: React.FC<IProductDetails> = ({ params }: IProductDetails) => {
+const Index: React.FC<IProductDetails> = ({ params }) => {
     return (
         <ProductDetails params={params} />
     );

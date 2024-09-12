@@ -68,7 +68,7 @@ const ProductListing = (): JSX.Element => {
 						whileInView={{ opacity: 1 }}
 					>
 						<Image
-							className="w-full aspect-auto object-cover object-center h-40 sm:h-[15.5rem] md:h-60 lg:h-[350px] xl:h-96"
+							className="w-full aspect-auto object-cover object-center h-40 sm:h-[15.5rem] md:h-60 lg:h-[350px] xl:h-96 2xl:h-[470px]"
 							src={product.productImageURL}
 							alt={product.productName}
 							width={320}

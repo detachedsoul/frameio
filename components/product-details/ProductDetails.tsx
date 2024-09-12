@@ -11,7 +11,7 @@ import { ChevronRightIcon } from "lucide-react";
 
 const ProductDetails: React.FC<IProductDetails> = ({
 	params,
-}: IProductDetails) => {
+}) => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
@@ -24,15 +24,15 @@ const ProductDetails: React.FC<IProductDetails> = ({
 		<div className="mt-12">
 			<section className="space-y-11">
 				<div className="text-brand-gray leading-7 flex flex-wrap items-center gap-2.5">
-					<Link href="/">Home</Link>
+					<Link className="hover:text-brand-purple" href="/">Home</Link>
 
 					<ChevronRightIcon size={20} />
 
-					<Link href="/categories">Categories</Link>
+					<Link className="hover:text-brand-purple" href="/categories">Categories</Link>
 
 					<ChevronRightIcon size={20} />
 
-					<Link href={`/categories/${params.category}`}>
+					<Link className="hover:text-brand-purple" href={`/categories/${params.category}`}>
                     {params.category}</Link>
 
 					<ChevronRightIcon size={20} />
@@ -43,7 +43,7 @@ const ProductDetails: React.FC<IProductDetails> = ({
 				</div>
 
 				<div className="grid gap-7 lg:gap-12 md:grid-cols-12 lg:items-center">
-					<div className="relative h-96 shadow-[2px_2px_20px_0px_rgba(0,_0,_0,_0.1)] rounded-[32px] lg:col-span-5 lg:h-[500px] xl:h-[550px] md:col-span-6">
+					<div className="relative h-96 shadow-[2px_2px_20px_0px_rgba(0,_0,_0,_0.1)] rounded-[32px] lg:col-span-5 lg:h-[500px] xl:h-[550px] 2xl:h-[600px] md:col-span-6">
 						<Image
 							className="w-full h-full rounded-[32px] aspect-auto object-cover object-center sm:object-top md:object-center"
 							src="/earthly-brown-tee.png"

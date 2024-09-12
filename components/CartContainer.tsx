@@ -5,7 +5,7 @@ interface ICartContainer {
     toggleModalHeader: Dispatch<SetStateAction<string>>;
 };
 
-const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }: ICartContainer) => {
+const CartContainer: React.FC<ICartContainer> = ({ toggleModalHeader }) => {
     return (
 		<>
 			<div className="space-y-5 px-5 sm:grid sm:grid-cols-2 sm:gap-10 sm:space-y-0 lg:px-10 lg:block lg:space-y-5">

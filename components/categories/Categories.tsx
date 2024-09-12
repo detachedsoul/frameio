@@ -4,7 +4,11 @@ import ProductListing from "@/components/ProductListing";
 import ProductListingLoading from "@/components/ProductsListingLoading";
 import { useState, useEffect } from "react";
 
-const Categories = ({ title = "All Collections" }: {title?: string}): JSX.Element => {
+interface ICategories {
+	title?: string;
+}
+
+const Categories: React.FC<ICategories> = ({ title = "All Collections" }): JSX.Element => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
